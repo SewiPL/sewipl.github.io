@@ -1,0 +1,110 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lucida Sans", sans-serif;
+            font-size: 17px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header'
+                'menu1'
+                'menu2'
+                'menu3'
+                'menu4'
+                'footer';
+            background-color: white;
+            gap: 10px;  
+        }
+
+        .header {
+            grid-area: header;
+            background-color: red;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .main1 {
+            grid-area: main1;
+            background-color: blue;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .main2 {
+            grid-area: main2;
+            background-color: yellow;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .main3 {
+            grid-area: main3;
+            background-color: orange;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .main4 {
+            grid-area: main4;
+            background-color: purple;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: greenyellow;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .header {grid-area: 1 / span 2;}
+            .main1 {grid-area: 2 / span 2;}
+            .main2 {grid-area: 3 / span 1;}
+            .main3 {grid-area: 3 / span 1;}
+            .main4 {grid-area: 4 / span 2;}
+            .footer {grid-area: 5 / span 2;}
+        }
+
+        @media (min-width: 600px) {
+            .header {grid-area: 1 / span 3;}
+            .main1 {grid-area: 2 / span 3;}
+            .main2 {grid-area: 3 / span 1;}
+            .main3 {grid-area: 3 / span 1;}
+            .main4 {grid-area: 3 / span 1;}
+            .footer {grid-area: 4 / span 3;}
+        }
+
+        @media (min-width: 920px) {
+            .header {grid-area: 1 / span 4;}
+            .main1 {grid-area: 2 / span 1;}
+            .main2 {grid-area: 2 / span 1;}
+            .main3 {grid-area: 2 / span 1;}
+            .main4 {grid-area: 2 / span 1;}
+            .footer {grid-area: 3 / span 4;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">A</div>
+
+        <div class="main1">B</div>
+        <div class="main2">C</div>
+        <div class="main3">D</div>
+        <div class="main4">E</div>
+
+        <div class="footer">F</div>
+    </div>
+</body>
+</html>
